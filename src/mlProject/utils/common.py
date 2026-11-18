@@ -40,12 +40,10 @@ def create_directories(path_to_directories:list,verbose=True):
 @ensure_annotations
 def save_json(path:Path,data:dict):
     """Save the given data as a JSON file at the specified path.
-
     Args:
         path (Path): The file path where the JSON data will be saved.
         data (dict): The dictionary containing the data to be saved.
     """
-
     with open(path,"w") as f:
         json.dump(data,f,indent=4)
     logger.info(f"json file saved at :{path}")
